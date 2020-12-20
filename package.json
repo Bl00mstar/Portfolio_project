@@ -33,7 +33,8 @@
     "styled-icons": "^10.22.0",
     "stylelint": "^13.7.2",
     "stylelint-config-recommended": "^3.0.0",
-    "stylelint-config-styled-components": "^0.1.1"
+    "stylelint-config-styled-components": "^0.1.1",
+    "web-vitals": "^1.0.1"
   },
   "scripts": {
     "start": "react-app-rewired start",
@@ -41,7 +42,6 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-
   "lint-staged": {
     "*.js": [
       "prettier --config .prettierrc --write",
