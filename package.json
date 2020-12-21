@@ -43,7 +43,6 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-
   "lint-staged": {
     "*.js": [
       "prettier --config .prettierrc --write",

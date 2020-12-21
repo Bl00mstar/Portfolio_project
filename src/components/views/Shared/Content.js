@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Asteroid from '@components/common/Asteroid/Asteroid';
+import HumanImage from '@components/common/HumanImage/HumanImage';
 import LeftWrapper from './Wrappers/LeftWrapper';
 import RightWrapper from './Wrappers/RightWrapper';
 import ComponentWrapper from './Wrappers/ComponentWrapper';
@@ -20,7 +20,7 @@ const Content = ({ layoutElement }) => {
           <LeftWrapper>{layoutElement}</LeftWrapper>
         )}
         <RightWrapper>
-          <Asteroid />
+          <HumanImage />
         </RightWrapper>
       </ComponentWrapper>
     </>
