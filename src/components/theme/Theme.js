@@ -1,11 +1,11 @@
 export default {
   colors: {
-    menu: '#A9A9A9',
+    menu: '#330000',
     ground: '#190019',
-    active: '#ed6337',
+    active: '#ffffff',
     icon: '	#6A5ACD',
-    light: '#ffffff',
-    form: '#2b2b2b',
+    light: '#b8b8b8',
+    form: '#FFEFD5',
     error: '#961227',
   },
 };

@@ -1,34 +1,38 @@
 import React from 'react';
-
 import Home from '@components/views/Home';
 import Contact from '@components/views/Contact';
 import Skills from '@components/views/Skills';
 import NotFound from '@components/views/NotFound';
 
-import { faIgloo } from '@fortawesome/free-solid-svg-icons';
+import {
+  faSwatchbook,
+  faHome,
+  faMailBulk,
+} from '@fortawesome/free-solid-svg-icons';
 
 export const routes = [
   {
     description: 'Home',
     path: '/',
-    icon: faIgloo,
+    icon: faHome,
     element: <Home />,
-  },
-  {
-    description: 'Contact',
-    path: '/contact',
-    icon: faIgloo,
-    element: <div>asdasdsd</div>,
   },
   {
     description: 'Skills',
     path: '/skills',
-    icon: faIgloo,
+    icon: faSwatchbook,
     element: <Skills />,
   },
   {
+    description: 'Contact',
+    path: '/contact',
+    icon: faMailBulk,
+    element: <Contact />,
+  },
+
+  {
     description: 'NotFound',
-    path: '/notfound',
+    path: '/*',
     element: <NotFound />,
   },
 ];

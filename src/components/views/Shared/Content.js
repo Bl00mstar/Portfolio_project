@@ -3,7 +3,6 @@ import HumanImage from '@components/common/HumanImage/HumanImage';
 import LeftWrapper from './Wrappers/LeftWrapper';
 import RightWrapper from './Wrappers/RightWrapper';
 import ComponentWrapper from './Wrappers/ComponentWrapper';
-
 const Content = ({ layoutElement }) => {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
@@ -11,6 +10,7 @@ const Content = ({ layoutElement }) => {
       setLoading(false);
     }
   }, [layoutElement]);
+
   return (
     <>
       <ComponentWrapper>
