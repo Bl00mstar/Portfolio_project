@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import NavLinkIcon from '../../features/NavLinkIcon/NavLinkIcon';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import media from '@utils/media';
 import { motion, AnimatePresence } from 'framer-motion';
