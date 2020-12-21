@@ -28,21 +28,45 @@ const Menu = () => {
     setIsOpen(true);
   }, [isMobile]);
 
-  const elementsMobile = menuIcons.map(({ icon, description, path }, key) => (
-    <StyledNavLink key={key} icon={faHome} to={path} description={description}>
-      <StyledNavLink exact to={path}>
-        <StyledFontAwesomeIcon icon={icon} />
-      </StyledNavLink>
-      <StyledNavLink exact to={path}>
-        <p>{description}</p>
-      </StyledNavLink>
-    </StyledNavLink>
-  ));
+  const elementsMobile = menuIcons.map(
+    ({ icon, description, path, type }, key) => {
+      if (type === 'routing') {
+        return (
+          <StyledNavLink
+            key={key}
+            icon={faHome}
+            to={path}
+            description={description}
+          >
+            <StyledNavLink exact to={path}>
+              <StyledFontAwesomeIcon icon={icon} />
+            </StyledNavLink>
+            <StyledNavLink exact to={path}>
+              <p>{description}</p>
+            </StyledNavLink>
+          </StyledNavLink>
+        );
+      } else {
+        return <></>;
+      }
+    }
+  );
 
   const elementsLargeScreen = menuIcons.map(
-    ({ icon, description, path }, key) => (
-      <NavLinkIcon key={key} icon={icon} to={path} description={description} />
-    )
+    ({ icon, description, path, type }, key) => {
+      if (type === 'routing') {
+        return (
+          <NavLinkIcon
+            key={key}
+            icon={icon}
+            to={path}
+            description={description}
+          />
+        );
+      } else {
+        return <></>;
+      }
+    }
   );
 
   return (
