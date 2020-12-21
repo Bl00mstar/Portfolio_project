@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { divideText, divideParagraph } from '@utils/TextTemplates';
 import letterVariants from '@utils/letterVariants';
-
-import { AboutTextTemplate } from '@utils/TextTemplates';
 import Paragraph from '@components/common/Paragraph/Paragraph';
 
 import { MotionSpan, HeaderDiv, DescriptionDiv } from './SkillsLayout';
@@ -10,15 +8,10 @@ import { MotionSpan, HeaderDiv, DescriptionDiv } from './SkillsLayout';
 const Skills = () => {
   const [loadingTitle, setLoadingTitle] = useState(true);
   const [loadingDescription, setLoadingDescription] = useState(true);
-  const [title, setTitle] = useState('About me');
+  const [title] = useState('About me');
   const [renderedText, setRenderedText] = useState([]);
   const [renderedParagraphs, setRenderedParagraphs] = useState([]);
-  const [content, setContent] = useState([]);
-  const [description, setDescription] = useState([
-    'asdfasdf',
-    'sdfasdggffd',
-    'gfiawerubv',
-  ]);
+  const [description] = useState(['asdfasdf', 'sdfasdggffd', 'gfiawerubv']);
 
   useEffect(() => {
     let textValue = divideText(title);
@@ -28,7 +21,7 @@ const Skills = () => {
       ...renderedParagraphs,
       paragraphValue,
     ]);
-  }, []);
+  }, [title, description]);
 
   useEffect(() => {
     setLoadingTitle(false);

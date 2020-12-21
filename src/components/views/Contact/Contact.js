@@ -26,7 +26,7 @@ const ErrorVariants = {
 const Contact = () => {
   const { register, handleSubmit, errors } = useForm({ mode: 'onChange' });
   const [isSent, setIsSent] = useState(false);
-  const [topic, setTopic] = useState('Contact me');
+  const [topic] = useState('Contact me');
   const [loadingTitle, setLoadingTitle] = useState(true);
   const [renderedText, setRenderedText] = useState([]);
 
@@ -41,7 +41,7 @@ const Contact = () => {
   useEffect(() => {
     let titleValue = divideText(topic);
     setRenderedText((renderedText) => [...renderedText, titleValue]);
-  }, []);
+  }, [topic]);
 
   const onSubmit = (data, e) => {
     emailjs.send(service, template, data, user).then(

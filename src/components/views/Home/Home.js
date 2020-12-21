@@ -5,7 +5,7 @@ import { divideText } from '@utils/TextTemplates';
 import { Mention, MotionSpan } from './HomeLayout';
 
 const Home = () => {
-  const [text, setText] = useState([
+  const [text] = useState([
     { first: 'Hej' },
     { second: 'Walka z AWSem' },
     { third: 'czy to rano czy to dzien' },
@@ -22,11 +22,12 @@ const Home = () => {
       let value = divideText(obj[key]);
       setRenderedText((renderedText) => [...renderedText, { value }]);
     });
-  }, []);
+  }, [text]);
 
   useEffect(() => {
     renderedText.map((el) => {
       contentIntoDiv(el);
+      return null;
     });
     setLoading(false);
   }, [renderedText]);

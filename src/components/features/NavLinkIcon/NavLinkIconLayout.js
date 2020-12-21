@@ -1,9 +1,8 @@
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { routes } from '../../../Routes';
 import media from '@utils/media';
 import { NavLink } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const MotionLink = motion.custom(NavLink);
 

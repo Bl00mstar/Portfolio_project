@@ -6,6 +6,7 @@ export const divideText = (string) => {
     let data = { id: index, letter: el, delay: delay_value };
     newArray.push(data);
     delay_value = delay_value + 0.1;
+    return null;
   });
   return newArray;
 };
@@ -13,10 +14,11 @@ export const divideText = (string) => {
 export const divideParagraph = (paragraphs) => {
   let delay = 1;
   let arr = [];
-  const txt = paragraphs.map((el, index) => {
+  paragraphs.map((el, index) => {
     let data = { id: index, text: el, delay: delay };
     arr.push(data);
     delay = delay + 0.2;
+    return null;
   });
   return arr;
 };
