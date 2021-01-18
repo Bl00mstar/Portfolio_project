@@ -1,7 +1,7 @@
 import React from 'react';
 import Home from '@components/views/Home';
 import Contact from '@components/views/Contact';
-import Skills from '@components/views/Skills';
+import About from '@components/views/About';
 import NotFound from '@components/views/NotFound';
 
 import {
@@ -19,17 +19,17 @@ export const routes = [
     type: 'routing',
   },
   {
-    description: 'Skills',
-    path: '/skills',
+    description: 'About',
+    path: '/about',
     icon: faSwatchbook,
-    element: <Skills />,
+    element: <About />,
     type: 'routing',
   },
   {
     description: 'Contact',
     path: '/contact',
     icon: faMailBulk,
-    element: <Contact />,
+    element: <Contact/>,
     type: 'routing',
   },
 

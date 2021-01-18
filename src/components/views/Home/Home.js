@@ -6,10 +6,8 @@ import { Mention, MotionSpan } from './HomeLayout';
 
 const Home = () => {
   const [text] = useState([
-    { first: 'Hej' },
-    { second: 'Walka z AWSem' },
-    { third: 'czy to rano czy to dzien' },
-    { four: '*w nocy' },
+    { first: 'Portfolio' },
+    // { second: '' },
   ]);
 
   const [renderedText, setRenderedText] = useState([]);

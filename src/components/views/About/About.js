@@ -3,7 +3,7 @@ import { divideText, divideParagraph } from '@utils/TextTemplates';
 import letterVariants from '@utils/letterVariants';
 import Paragraph from '@components/common/Paragraph/Paragraph';
 
-import { MotionSpan, HeaderDiv, DescriptionDiv } from './SkillsLayout';
+import { MotionSpan, HeaderDiv, DescriptionDiv } from './AboutLayout';
 
 const Skills = () => {
   const [loadingTitle, setLoadingTitle] = useState(true);
@@ -11,7 +11,7 @@ const Skills = () => {
   const [title] = useState('About me');
   const [renderedText, setRenderedText] = useState([]);
   const [renderedParagraphs, setRenderedParagraphs] = useState([]);
-  const [description] = useState(['asdfasdf', 'sdfasdggffd', 'gfiawerubv']);
+  const [description] = useState(['....', '', '']);
 
   useEffect(() => {
     let textValue = divideText(title);
